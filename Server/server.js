@@ -46,6 +46,9 @@ app.post("/create-checkout-session", async(req, res) => {
             quantity: item.quantity,
           };
         }),
+        // automatic_tax: {
+        //     'enabled': true,
+        // },
         success_url: `${process.env.PUBLIC_URL}/success.html`,
         cancel_url: `${process.env.PUBLIC_URL}/cancel.html`,
       });
