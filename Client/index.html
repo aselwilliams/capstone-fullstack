@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Asel Williams" />
+    <title>Baking Art</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header starts -->
+    <header class="header">
+      <a href="#" class="logo">Baking Art</a>
+      <nav class="navbar">
+        <a href="#">Home</a>
+        <a id='menu-link' href="./menu.html">Menu</a>
+        <a href="./custom.html">Custom Cake</a>
+        <a href="#">Recipes</a>
+        <a href="#">Classes</a>
+      </nav>
+      <div class="icons">
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-bag"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+    <!-- hero starts -->
+    <section class="hero" id="hero">
+      <div class="content">
+        <h1>Baking Art</h1>
+        <p class="type-text1">
+          <!-- One bite and you will overrule <br />
+          all objections -->
+        </p>
+        <p class="type-text2"></p>
+       
+        <a class="btn" href="./menu.html">Order Now</a>
+      </div>
+      <img class="hero-img" src="./../Assets/raspberry.jpeg" alt="cake" />
+    </section>
+    <!-- Master Class starts -->
+    <section class="master-class hidden">
+      <div class="info">
+        <h1>Master Class</h1>
+        <p>During this holiday season only</p>
+        <p>Gift Certificates for your loved ones -10% off</p>
+      </div>
+    </section>
+    <!-- Ingredients start -->
+    <section class="ingredients">
+      <article class="ingredients-img">
+        <img src="./../Assets/cakes.jpg" alt="cakes" />
+      </article>
+      <article class="ingredients-content">
+        <h1 class="heading">Ingredients</h1>
+        <p class="text">
+          We exclusively use the finest quality ingredients providing your body
+          important fiber and nutrients. For people who suffer from allergies we
+          offer a delicious range of wheat and yeast free products.
+        </p>
+        <a class="btn" href="#">Read More</a>
+      </article>
+    </section>
+    <!-- Reserve room starts -->
+    <section class="reserve">
+      <article class="reserve-content">
+        <h1 class="heading">Let's Celebrate</h1>
+        <p class="text">
+          Need to host your party? Our warmly lit party room can be reserved for
+          your occasion. With our delicious meal options you can relax and enjoy
+          the fun too.
+        </p>
+        <a class="btn" href="#">Reserve Room</a>
+      </article>
+      <article class="reserve-img">
+        <img src="./../Assets/private-room.jpeg" alt="party-room" />
+      </article>
+    </section>
+    <!-- Menu highlights start -->
+    <section class="highlights">
+      <h1 class="heading center hidden">Menu Highlights</h1>
+      <div class="highlights-wrapper">
+        <article class="highlights-card hidden">
+          <img
+            src="https://i.pinimg.com/736x/06/af/ce/06afce295dd49c4a982dea49331fb159--dessert-tray-dessert-tables.jpg"
+            alt="dessert"
+          />
+          <a class="btn pink-btn" href="#">Mini Desserts</a>
+        </article>
+        <article class="highlights-card hidden">
+          <img
+            id="designer-cake"
+            src="./../Assets/anniversary-cake.jpeg"
+            alt="sourdough bread"
+          />
+          <a class="btn pink-btn" href="#">Designer Cakes</a>
+        </article>
+        <article class="highlights-card hidden">
+          <img
+            src="https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YnJlYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            alt="sourdough bread"
+          />
+          <a class="btn pink-btn" href="#">Sourdough bread</a>
+        </article>
+      </div>
+    </section>
+    <!-- Newsletter starts -->
+    <section class="newsletter">
+      <div class="newsletter-wrapper">
+        <p class="secondary center">Stay Connected</p>
+        <p class="text">
+          Subscribe to our newsletter to receive updates on new products,
+          recipes and rewards!
+        </p>
+        <form class="newsletter-form">
+          <input type="text"  id="name" name='name' placeholder="Your name" />
+          <input type="email" id="email" name='email' placeholder="Your email" />
+          <a class="btn pink-btn" type='submit' href="#">Subscribe</a>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer starts -->
+    <footer>
+      <div class="footer-left">
+        <a class='link' href="#">FAQs</a>
+        <a class='link'href="#">Contact</a>
+        <a class='link' href="#">Careers</a>
+        <a class='link' href="#">Our story</a>
+      </div>
+      <div class="footer-right">
+        <p class="center">Follow Us</p>
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-yelp"></i>
+      </div>
+    </footer>
+
+    ---Cart starts---
+  <div class="cart-overlay" id="cart-container">
+    <aside class="cart">
+        <header class="cart-header">
+      <button class="cart-close">
+        <i class="fas fa-times"></i>
+      </button>
+     
+
+        <h3 class="cart-text">Your Order</h3>
+      </header>
+      <!-- {/* cart items */} -->
+       <div class="cart-items">
+       
+      </div>
+      <!-- {/* footer */} -->
+      <section class="cart-footer">
+        <h3 class="cart-total">
+          Subtotal :
+        </h3>
+        <button class="cart-checkout btn">Checkout</button>
+    </section>
+    </aside>
+  </div> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EasePack.min.js"></script>  
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

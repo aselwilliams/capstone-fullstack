@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Asel Williams" />
+    <title>Baking Art</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+  <body>
+    <!-- header starts -->
+    <header class="header">
+      <a href="#" class="logo">Baking Art</a>
+      <nav class="navbar">
+        <a href="./index.html">Home</a>
+        <a id="menu-link" href="./menu.html">Menu</a>
+        <a href="#">Custom Cake</a>
+        <a href="#">Recipes</a>
+        <a href="#">Classes</a>
+      </nav>
+      <div class="icons">
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-bag"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+    <!-- hero starts -->
+    <section>
+      <img
+        src="https://i.pinimg.com/originals/0e/9e/f0/0e9ef021c4ca43323b35cfeab1a362ea.jpg"
+        alt="cake"
+      />
+      <img
+        src="https://zakazat-torty.ru/image/cache/catalog/i/be/kb/6cd296d20924514db42d197ec6b8eaa0-356x334.jpg"
+        alt="cake"
+      />
+      <img
+        id="pop"
+        src="https://www.dinarakasko.com/wp-content/uploads/2021/08/D35A0620-1-1100x640.jpg"
+        alt="cake"
+      />
+      <img
+        src="https://dulcinella.md/sites/default/files/styles/tc_grid_crop/public/torturi-la-comanda/img_0588_web.jpg?itok=042Bd3M9"
+        alt="cake"
+      />
+      <img
+        src="https://i.pinimg.com/originals/95/86/b5/9586b55ed935e70bfa42920fe960a05a.jpg"
+        alt="cake"
+      />
+    </section>
+    <h1>Order or Request a quote for a Custom Cake</h1>
+    <p>
+      Please submit your cake request and we will be in touch with you to
+      confirm.
+    </p>
+    <p>
+      This is the best and fastest way to get a quote outside of calling the
+      bakery.
+    </p>
+   
+    <form action="https://formsubmit.co/aselwilliams22@gmail.com" method="POST">
+      <h3>Describe Your Cake</h3>
+      <article class="split">
+      <section class='left'>
+        <div class="column">
+            <label for="name">Your name:</label>
+            <input type="text" id="name" name='name' required/>
+          </div>
+          <div class="column">
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name='email' required/>
+          </div>
+          <div class="column">
+            <label for="phone">Your phone:</label>
+            <input type="tel" id="phone" name='phone' required/>
+          </div>
+      <div class="row">
+        <h5>How did you hear about us?</h5>
+      </div>
+      <div class="center">
+      <div class="row">
+        <input type="radio" id="google" name="hear">
+        <label for="google">Google search</label>
+        <input type="radio" id="facebook" name="hear">
+        <label for="facebook">Facebook</label>
+      </div>
+      <div class="row">
+        <input type="radio" id="instagram" name="hear">
+        <label for="instagram">Instagram</label>
+        <input type="radio" id="friend" name="hear">
+        <label for="friend">Referred by friend</label>
+      </div>
+      <div class="row">
+        <input type="radio" id="drove-by" name="hear">
+        <label for="drove-by">Drove by</label>
+        <input type="radio" id="TV" name="hear">
+        <label for="TV">Saw on TV</label>
+      </div>
+    </div>
+
+
+      <div class="row">
+        <h5>Have you ordered from us before?</h5>
+      </div>
+      <div class="row">
+        <input type="radio" id="yes" name="repeated">
+        <label for="yes">Yes</label>
+        <input type="radio" id="No" name="repeated">
+        <label for="No">No</label>
+      </div>
+
+      <div class="row">
+        <h5>What type of icing would you like?</h5>
+      </div>
+      <div class="center">
+      <div class="row">
+        <input type="radio" id="buttercream" name="icing" value='buttercream'>
+        <label for="buttercream">Buttercream</label>
+        <input type="radio" id="royal" name="icing" value="royal">
+        <label for="royal">Royal</label>
+      </div>
+      <div class="row">
+        <input type="radio" id="fondant" name="icing" value="fondant">
+        <label for="fondant">Fondant</label>
+        <input type="radio" id="custard" name="icing" value="custard">
+        <label for="custard">Custard</label>
+      </div>
+      <div class="row">
+        <input type="radio" id="diplomat" name="icing" value="diplomat">
+        <label for="diplomat">Diplomat</label>
+        <input type="radio" id="glaze" name="icing" value="glaze">
+        <label for="glaze">Glaze</label>
+      </div>
+    </div>
+    <div class="column">
+        <label for="link">Please paste cake image link, if necessary</label>
+        <input type="text" id="link"/>
+      </div>
+    </section>
+
+    <section class="right">
+        <div class="column">
+            <label for="guests">How many guests are you serving?</label>
+            <input type="text" id="guests" required/>
+          </div>
+
+          <div class="column">
+            <label for="flavor">What flavor of cake?</label>
+            <input type="text" id="flavor" required/>
+          </div>
+
+          <div class="column">
+            <label for="color">What color scheme?</label>
+            <input type="text" id="color" required/>
+          </div>
+
+          <div class="column">
+            <label for="date">What date do you need this cake?</label>
+            <input type="date" id="date" required/>
+          </div>
+
+          <div class="column">
+            <label for="time">What time do you need it by?</label>
+            <input type="text" id="time" required/>
+          </div>
+          <div class="column">
+            <label for="details">Specific instructions:</label>
+            <textarea name="details" id="details" cols="30" rows="10" ></textarea>
+          </div> 
+    </section>
+</article>
+
+<button class="submit-btn">Send Request</button>
+
+    </form>
+ <!-- Footer starts -->
+ <footer>
+    <div class="footer-left">
+        <h3>Bakery Hours</h3>
+        <p>Sunday - Monday: Closed</p>
+        <p>Tues: 9:00 am - 5:00 pm</p>
+        <p>Wed: 9:00 am - 5:00 pm</p>
+        <p>Thu: 9:00 am - 5:00 pm</p>
+        <p>Fri: 9:00 am - 5:00 pm</p>
+        <p>Sat: 9:00 am - 5:00 pm</p>
+    </div>
+    <div class="contact-info">
+        <h3>Contact Info</h3> 
+        <p>Email: bakingart@bakery.com</p>
+        <p>Visit Us: 5213 Rowlett Road, Rowlett, TX 75088</p>
+        <p>Phone:(972) 123-9199</p>
+    </div>    
+    <div class="footer-right">
+      <p class="center">Follow Us</p>
+      <i class="fa-brands fa-square-facebook"></i>
+      <i class="fa-brands fa-square-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-tiktok"></i>
+      <i class="fa-brands fa-yelp"></i>
+    </div>
+  </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="custom.js"></script>
+  </body>
+</html>

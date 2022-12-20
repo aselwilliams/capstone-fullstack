@@ -1,0 +1,194 @@
+ [
+    {
+      "id": 1,
+      "title": "rainbow cake",
+      "category": "cakes",
+      "price": 30.00,
+      "count": 1,
+      "img": "./../Assets/balloon-cake.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "matcha tea cake",
+      "category": "cakes",
+      "price": 30.00,
+      "count": 1,
+      "img": "./../Assets/matcha-cake.jpeg"
+    },
+    {
+      "id": 3,
+      "title": "chocolate mousse cake",
+      "category": "cakes",
+      "price":29.00,
+      "count": 1,
+      "img": "http://gillesmarchal.com/wp-content/uploads/2016/10/gato_21_@2x.png"
+    },
+    {
+      "id": 4,
+      "title": "sourdough bread",
+      "category": "breads",
+      "price": 7.99,
+      "count": 1,
+      "img": "./../Assets/bread.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "coffee cupcake",
+      "category": "cupcakes",
+      "price": 3.0,
+      "count": 1,
+      "img": "./../Assets/coffee-cupcake.jpeg"
+    },
+    {
+      "id": 6,
+      "title": "french croissants",
+      "category": "pastry",
+      "price": 2.79,
+      "count": 1,
+      "img": "./../Assets/croissant.png"
+    },
+    {
+      "id": 7,
+      "title": "strawberry fraisier",
+      "category": "mini desserts",
+      "price": 3.99,
+      "count": 1,
+      "img": "https://gillesmarchal.com/wp-content/uploads/2022/05/070522_022のコピー.jpg"
+    },
+    {
+      "id": 8,
+      "title": "mango burst",
+      "category": "mini desserts",
+      "price": 3.79,
+      "count": 1,
+      "img": "https://gillesmarchal.com/wp-content/uploads/2020/09/TYO4495.jpg"
+    },
+    {
+      "id": 9,
+      "title": "raspberry mille feuille",
+      "category": "mini desserts",
+      "price": 2.99,
+      "count": 1,
+      "img": "https://gillesmarchal.com/wp-content/uploads/2022/05/070522_008のコピー.jpg"
+    },
+    {
+      "id": 10,
+      "title":"strawberry tart",
+      "category": "mini desserts",
+      "price": 3.45,
+      "count": 1,
+      "img": "https://gillesmarchal.com/wp-content/uploads/2022/05/070522_013%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC.jpg"
+    },
+    {
+      "id": 11,
+      "title":"carrot cake",
+      "category": "cakes",
+      "price": 28.50,
+      "count": 1,
+      "img": "https://stevenbaker.de/wp-content/uploads/2020/07/steven-baker-produkt-cake-carrot-cake-806x596.jpg"
+    },
+    {
+      "id": 12,
+      "title":"coconut cake",
+      "category": "cakes",
+      "price": 29.00,
+      "count": 1,
+      "img": "https://stevenbaker.de/wp-content/uploads/2020/07/steven-baker-produkt-cake-carrot-cake-806x596.jpg"
+    },
+    {
+      "id": 13,
+      "title":"raspberry cake",
+      "category": "mini desserts",
+      "price": 4.15,
+      "count": 1,
+      "img": "https://dinarakasko.com/wp-content/uploads/2017/10/dinara-kasko-molds-470x470.jpg"
+    },
+    {
+      "id": 14,
+      "title":"cherry cake",
+      "category": "cakes",
+      "price": 29.50,
+      "count": 1,
+      "img": "https://dinarakasko.com/wp-content/uploads/2017/07/cherry-cake-470x470.jpg"
+    },
+    {
+      "id": 15,
+      "title":"almond heart cake",
+      "category": "cakes",
+      "price": 33.00,
+      "count": 1,
+      "img": "https://dinarakasko.com/wp-content/uploads/2017/02/heart-cake-470x470.jpg"
+    },
+    {
+      "id": 16,
+      "title":"chocolate block",
+      "category": "cakes",
+      "price": 33.00,
+      "count": 1,
+      "img": "https://dinarakasko.com/wp-content/uploads/2016/12/block-470x470.jpg"
+    },
+    {
+      "id": 17,
+      "title":"strawberry coconut cake",
+      "category": "cakes",
+      "price": 34.00,
+      "count": 1,
+      "img": "https://dinarakasko.com/wp-content/uploads/2016/12/cake-strawberry-coconut-header-470x470.jpg"
+    },
+    {
+      "id": 18,
+      "title":"whole-wheat bread",
+      "category": "breads",
+      "price": 5.50,
+      "count": 1,
+      "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sourdough-bread-horizontal-466-1548048509.jpg?crop=1xw:0.9995002498750624xh;center,top&resize=480:*"
+    },
+    {
+      "id": 19,
+      "title":"multi-grain bread",
+      "category": "breads",
+      "price": 5.50,
+      "count": 1,
+      "img": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sourdough-bread-horizontal-466-1548048509.jpg?crop=1xw:0.9995002498750624xh;center,top&resize=480:*"
+    },
+    {
+      "id": 20,
+      "title":"cinnamon roll",
+      "category": "pastry",
+      "price": 3.00,
+      "count": 1,
+      "img": "https://i.ebayimg.com/images/g/wBQAAOSwRgJXlqtc/s-l500.jpg"
+    },
+    {
+      "id": 21,
+      "title":"red velvet cupcake",
+      "category": "cupcakes",
+      "price": 3.30,
+      "count": 1,
+      "img": "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y3VwY2FrZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 22,
+      "title":"chocolate hazelnut cupcake",
+      "category": "cupcakes",
+      "price": 3.50,
+      "count": 1,
+      "img": "https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y3VwY2FrZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 23,
+      "title":"chocolate mint cupcake",
+      "category": "cupcakes",
+      "price": 3.00,
+      "count": 1,
+      "img": "https://images.unsplash.com/photo-1587668178277-295251f900ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGN1cGNha2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 24,
+      "title":"apple danish",
+      "category": "pastry",
+      "price": 2.50,
+      "count": 1,
+      "img": "https://media.gettyimages.com/id/157290015/photo/danish-pastry-on-white-background.jpg?s=612x612&w=0&k=20&c=xxXeqkljqD3MvArnwcD7L6-E9u87yXEzJGSU6Owf2iM="
+    }
+  ]
