@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    
     <!-- header starts -->
     <header class="header">
       <a href="#" class="logo">Baking Art</a>
@@ -27,11 +28,19 @@
         <a href="#">Classes</a>
       </nav>
       <div class="icons">
+        <input class='search-input' type="text" placeholder="Search menu item">
+          <div id="search-btn" class="fas fa-search"></div>
+          <div id="cart-btn" class="fas fa-shopping-bag"> </div>
+          <span class="cart-item-count"></span>
+          <div id="login-btn" class="fas fa-user"></div>
+          <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+      <!-- <div class="icons">
         <div id="search-btn" class="fas fa-search"></div>
         <div id="cart-btn" class="fas fa-shopping-bag"></div>
         <div id="login-btn" class="fas fa-user"></div>
         <div id="menu-btn" class="fas fa-bars"></div>
-      </div>
+      </div> -->
     </header>
     <!-- hero starts -->
     <section class="hero" id="hero">
@@ -79,7 +88,7 @@
           your occasion. With our delicious meal options you can relax and enjoy
           the fun too.
         </p>
-        <a class="btn" href="#">Reserve Room</a>
+        <a class="btn" href="https://koalendar.com/e/reserve-a-party-room">Reserve Room</a>
       </article>
       <article class="reserve-img">
         <img src="./../Assets/private-room.jpeg" alt="party-room" />
@@ -94,7 +103,7 @@
             src="https://i.pinimg.com/736x/06/af/ce/06afce295dd49c4a982dea49331fb159--dessert-tray-dessert-tables.jpg"
             alt="dessert"
           />
-          <a class="btn pink-btn" href="#">Mini Desserts</a>
+          <a class="btn pink-btn" href="./menu.html">Mini Desserts</a>
         </article>
         <article class="highlights-card hidden">
           <img
@@ -102,14 +111,14 @@
             src="./../Assets/anniversary-cake.jpeg"
             alt="sourdough bread"
           />
-          <a class="btn pink-btn" href="#">Designer Cakes</a>
+          <a class="btn pink-btn" href="./custom.html">Designer Cakes</a>
         </article>
         <article class="highlights-card hidden">
           <img
             src="https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YnJlYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
             alt="sourdough bread"
           />
-          <a class="btn pink-btn" href="#">Sourdough bread</a>
+          <a class="btn pink-btn" href="./menu.html">Sourdough bread</a>
         </article>
       </div>
     </section>
@@ -124,7 +133,7 @@
         <form class="newsletter-form">
           <input type="text"  id="name" name='name' placeholder="Your name" />
           <input type="email" id="email" name='email' placeholder="Your email" />
-          <a class="btn pink-btn" type='submit' href="#">Subscribe</a>
+          <a id="sub-btn" class="btn pink-btn">Subscribe</a>
         </form>
       </div>
     </section>
@@ -147,7 +156,7 @@
       </div>
     </footer>
 
-    ---Cart starts---
+    <!---Cart starts--->
   <div class="cart-overlay" id="cart-container">
     <aside class="cart">
         <header class="cart-header">
@@ -177,5 +186,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EasePack.min.js"></script>  
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
+    <script src="cart.js"></script>
   </body>
 </html>

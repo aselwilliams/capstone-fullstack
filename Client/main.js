@@ -8,19 +8,20 @@ menu.onclick= () => {
 window.onscroll = () => {
     navbar.classList.remove('active');
 }
-// Cart starts
-const cartBtn = document.querySelector("#cart-btn");
-const cartElement = document.querySelector(".cart");
-const cartContainer = document.querySelector("#cart-container");
-const closeBtn = document.querySelector(".cart-close");
+// // Cart starts
+// const cartBtn = document.querySelector("#cart-btn");
+// const cartElement = document.querySelector(".cart");
+// const cartContainer = document.querySelector("#cart-container");
+// const closeBtn = document.querySelector(".cart-close");
 
-cartBtn.onclick = () => {
-    cartContainer.classList.add("show");
-  };
+// cartBtn.onclick = () => {
+//   console.log('show')
+//     cartContainer.classList.add("show");
+//   };
   
-  closeBtn.onclick = () => {
-    cartContainer.classList.remove("show");
-  };
+//   closeBtn.onclick = () => {
+//     cartContainer.classList.remove("show");
+//   };
 
 // Scroll animation starts
   const observer = new IntersectionObserver((entries)=> {
@@ -72,11 +73,13 @@ menuLink.addEventListener('click', getAllProducts);
 
 //newsletter
 let formEl = document.querySelector('.newsletter-form');
+let subBtn = document.querySelector('#sub-btn')
 
-const createSubscription = (body) => axios.post('http://localhost:8080/api/subscribers', {body}).then(res=>console.log(res.data)).catch(err=> console.log(err));
+// const createSubscription = (body) => axios.post('http://localhost:8080/api/subscribers', {body}).then(res=>console.log(res.data)).catch(err=> console.log(err));
 
-function handleSubmit(e) {
-    e.preventDefault();
+function handleSubmit() {
+    // e.preventDefault();
+    console.log('handlesubmit')
 
     let name = document.querySelector('#name');
     let email = document.querySelector('#email');
@@ -85,11 +88,11 @@ function handleSubmit(e) {
         name: name.value,
         email: email.value
     }
-    // axios.post('http://localhost:8080/api/subscribers', newSub).then(res=>console.log(res.data)).catch(err=> console.log(err));
-    createSubscription(newSub)
+    axios.post('http://localhost:8080/api/subscribers', newSub).then(res=>console.log(res.data)).catch(err=> console.log(err));
+    // createSubscription(newSub)
     alert('Thank you for your subscription!')
     name.value = ''
     email.value = ''
 }
-
+subBtn.addEventListener('click',handleSubmit)
 formEl.addEventListener('submit', handleSubmit)
