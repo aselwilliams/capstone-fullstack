@@ -1,7 +1,9 @@
 require("dotenv").config();
+const bcrypt = require('bcryptjs');
 const express = require("express");
 const cors = require("cors");
 const {seed, getAllProducts, deleteProduct, editProduct, createProduct, createCustomOrder, createSubscription} = require('./controller')
+const {userLogin, userSignup} = require('./authController')
 
 const app = express();
 
@@ -24,6 +26,10 @@ app.post('/api/orders', createCustomOrder)
 
 app.post('/api/subscribers', createSubscription)
 let cart=require('./db.json')
+
+app.post('/api/login',userLogin)
+
+app.post('/api/signUp',userSignup)
 
 app.post("/create-checkout-session", async(req, res) => {
     try {
@@ -49,7 +55,7 @@ app.post("/create-checkout-session", async(req, res) => {
         // automatic_tax: {
         //     'enabled': true,
         // },
-        success_url: `${process.env.PUBLIC_URL}/success.html`,
+        success_url: `http://127.0.0.1:5501/Client/index.html`,
         cancel_url: `${process.env.PUBLIC_URL}/cancel.html`,
       });
       res.json({ url: session.url});

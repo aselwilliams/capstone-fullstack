@@ -8,20 +8,6 @@ menu.onclick= () => {
 window.onscroll = () => {
     navbar.classList.remove('active');
 }
-// // Cart starts
-// const cartBtn = document.querySelector("#cart-btn");
-// const cartElement = document.querySelector(".cart");
-// const cartContainer = document.querySelector("#cart-container");
-// const closeBtn = document.querySelector(".cart-close");
-
-// cartBtn.onclick = () => {
-//   console.log('show')
-//     cartContainer.classList.add("show");
-//   };
-  
-//   closeBtn.onclick = () => {
-//     cartContainer.classList.remove("show");
-//   };
 
 // Scroll animation starts
   const observer = new IntersectionObserver((entries)=> {

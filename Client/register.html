@@ -12,7 +12,7 @@
       <h1>Please Sign Up</h1>
       <form>
         <div class="form-control">
-          <input type="text" required />
+          <input id='email' type="text" required />
           <label>Email</label>
           <!-- <label>
             <span style="transition-delay:0ms">E</span>
@@ -23,13 +23,14 @@
           </label> -->
         </div>
         <div class="form-control">
-          <input type="password" required />
+          <input id='password' type="password" required />
           <label>Password</label>
         </div>
-        <button class="btn">Sign Up</button>
+        <button  id='submit-btn' class="btn">Sign Up</button>
         <p class="text">By clicking Sign Up, you agree to the terms of use. <a href="#">Terms of Use</a></p>
       </form>
     </div>
-    <script src="register.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>

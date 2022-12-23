@@ -14,7 +14,8 @@ const login = (body) => axios.post(`${baseUrl}/api/login`, body)
     .then((res)=> {
         console.log('hit login')
         sessionStorage.setItem('user', JSON.stringify(res.data));
-        window.location.reload();
+        // window.location.reload();
+        window.location.href = './menu.html'
     })
     .catch((err)=> console.log(err));
 
@@ -22,7 +23,8 @@ const signUp = (body) => axios.post(`${baseUrl}/api/signUp`, body)
     .then((res)=> {
         console.log('hit signUp')
         sessionStorage.setItem('user', JSON.stringify(res.data));
-        window.location.reload();
+        // window.location.reload();
+        window.location.href = './login.html'
     })
     .catch((err)=> console.log(err));
 
@@ -52,3 +54,39 @@ authSubmit.addEventListener('click', (e)=> {
     email.value = ''
     password.value = ''
 })
+
+// ---------Checkout starts------------
+const checkoutBtn = document.querySelector("#checkout-btn");
+
+checkoutBtn.addEventListener("click", () => {
+  cartArr = JSON.parse(localStorage.getItem('cart'))
+  
+  fetch("http://localhost:8080/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      items: 
+      cartArr.map((el)=>{
+        return {
+          id:+el.product_id, 
+          quantity:+el.count,
+          images:[el.img]
+        }
+      }),
+   
+    }),
+  })
+    .then((res) => {
+      if (res.ok) return res.json();
+      return res.json().then((json) => Promise.reject(json));
+    })
+    .then(({ url }) => {
+      window.location = url
+      localStorage.clear()
+    })
+    .catch((e) => {
+      console.error(e.error);
+    });
+});

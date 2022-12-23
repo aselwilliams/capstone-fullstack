@@ -25,6 +25,12 @@ module.exports = {
                 count INTEGER,
                 img TEXT
             );
+            
+            CREATE TABLE users(
+                user_id serial primary key,
+                email varchar not null,
+                passhash varchar(500) not null 
+            );
 
             CREATE TABLE subscribers (
                 subscriber_id SERIAL PRIMARY KEY,
