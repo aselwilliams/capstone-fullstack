@@ -37,7 +37,7 @@ const password = document.querySelector('#password')
 const authSubmit = document.querySelector('#submit-btn')
 const optionalMsg = document.querySelector('#optional-msg')
 const formTitle = document.querySelector('#form-title')
-// const button = document.querySelector('#submit-btn')
+
 
 // var button = e.relatedTarget;
 // formTitle.textContent = button.textContent;
