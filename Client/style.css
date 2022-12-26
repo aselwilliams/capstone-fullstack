@@ -66,6 +66,14 @@ html {
 #menu-btn {
   display: none;
 }
+.search-input{
+  padding:1rem 1.5rem;
+  border-radius: 1rem;
+  display:none;
+}
+.show{
+  display: block;
+}
 @media (max-width: 991px) {
   html {
     font-size: 55%;
