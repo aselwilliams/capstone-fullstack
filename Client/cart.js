@@ -113,7 +113,7 @@ function renderCartItems(cartArr) {
 }
 function removeFromCart(id){
     cartArr = JSON.parse(localStorage.getItem('cart'))
-    let index= cartArr.findIndex((el)=>el.id===id)
+    let index= cartArr.findIndex((el)=>el.product_id===id)
     cartArr.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cartArr))
     updateCart()
