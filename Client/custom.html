@@ -207,9 +207,32 @@
       <i class="fa-brands fa-yelp"></i>
     </div>
   </footer>
+    <!---Cart starts--->
+    <div class="cart-overlay" id="cart-container">
+      <aside class="cart">
+          <header class="cart-header">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+          <h3 class="cart-text">Your Order</h3>
+        </header>
+        <!--  cart items  -->
+        <div class="cart-items">
+         
+        </div>
+        <!--  cart footer  -->
+        <section class="cart-footer">
+          <h3 class="cart-total">
+            Subtotal :
+          </h3>
+          <button class="cart-checkout btn"><a href="./login.html">Checkout</a></button>
+      </section>
+      </aside>
+    </div>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="custom.js"></script>
+    <script src="./custom.js"></script>
+    <script src="./cart.js"></script>
   </body>
 </html>
