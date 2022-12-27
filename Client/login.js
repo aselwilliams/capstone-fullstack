@@ -22,6 +22,11 @@ const login = (body) => axios.post(`${baseUrl}/api/login`, body)
 const signUp = (body) => axios.post(`${baseUrl}/api/signUp`, body)
     .then((res)=> {
         console.log('hit signUp')
+        if(res.data==='Email is already in use, try login'){
+            alert('Email is already in use, please login.')
+        } else {
+            alert("Account created successfully");
+        }
         sessionStorage.setItem('user', JSON.stringify(res.data));
         // window.location.reload();
         window.location.href = './login.html'
@@ -39,20 +44,18 @@ const optionalMsg = document.querySelector('#optional-msg')
 const formTitle = document.querySelector('#form-title')
 
 
-// var button = e.relatedTarget;
-// formTitle.textContent = button.textContent;
-
-// formTitle.textContent.trim() === 'Login' ? (optionalMsg.style.display = 'none') : (optionalMsg.style.display = 'block');
-
-
 authSubmit.addEventListener('click', (e)=> {
 
     e.preventDefault();
-    const body = {email: email.value, password:password.value};
-    console.log(authSubmit.textContent)
-    authSubmit.textContent.trim() === 'Login' ? handleAuth("Login" , body) : handleAuth("SignUp", body);
-    email.value = ''
-    password.value = ''
+    let emailValue = email.value;
+    let passwordValue = password.value;
+    if(emailValue !== "" && passwordValue !== ""){
+        const body = {email: email.value, password:password.value};
+        console.log(authSubmit.textContent)
+        authSubmit.textContent.trim() === 'Login' ? handleAuth("Login", body) : handleAuth("SignUp", body);
+    }
+        email.value = ''
+        password.value = ''
 })
 
 // ---------Checkout starts------------
