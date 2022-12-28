@@ -63,8 +63,8 @@ let subBtn = document.querySelector('#sub-btn')
 
 // const createSubscription = (body) => axios.post('http://localhost:8080/api/subscribers', {body}).then(res=>console.log(res.data)).catch(err=> console.log(err));
 
-function handleSubmit() {
-    // e.preventDefault();
+function handleSubmit(e) {
+    e.preventDefault();
     console.log('handlesubmit')
 
     let name = document.querySelector('#name');

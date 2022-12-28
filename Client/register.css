@@ -3,8 +3,6 @@
     box-sizing: border-box;
 }
 body{
-    /* background-color: #FAACA8;
-    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);   */
     background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
     color: #fff;
     font-family:'Muli', sans-serif;

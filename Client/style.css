@@ -188,14 +188,7 @@ html {
 .master-class {
   width: 100vw;
   height: 25vh;
-  /* background: rgb(231,231,238);
-  background: linear-gradient(0deg, rgba(231,231,238,1) 0%, rgba(199,193,193,0.0802696078431373) 85%); */
   background-image: url('https://t4.ftcdn.net/jpg/02/33/22/19/240_F_233221972_Sreta7AKJVzcKSvJywxWd8ZzSzg1SJNk.jpg');
-  /* background-image:url('https://img.freepik.com/premium-vector/abstract-technology-white-gray-color-modern-background_41981-1010.jpg?w=1060');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top; */
-  /* border: 5px solid var(--secondary-color); */
   text-shadow: white 1px 0 10px;
 }
 .master-class h1 {
@@ -590,7 +583,6 @@ footer {
   }
   .cart-item-count {
     background-color: var(--neutral-color);
-    /* padding:.2rem .7rem; */
     border-radius:50%;
     position: absolute;
     bottom:1.2rem;

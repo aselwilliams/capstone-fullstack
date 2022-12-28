@@ -21,7 +21,6 @@ module.exports = {
             if(!dbRes[0][0]){
                 res.status(400).send('Account not found, try signing up')
             }
-            // const {passhash} = dbRes[0][0]
             
             const authenticated = bcrypt.compareSync(password,dbRes[0][0].passhash)
             !authenticated ? res.status(403).send('incorrect password') : delete dbRes[0][0].passhash
