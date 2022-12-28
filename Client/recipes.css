@@ -172,6 +172,9 @@ ul li{
     background-color:transparent;
     color: #282e34;
 }
+.link{
+  color:#fff;
+}
 @media(max-width:568px){
     .pimg1, .pimg2, .pimg3{
         background-attachment: scroll;
