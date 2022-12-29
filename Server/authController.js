@@ -1,8 +1,21 @@
 require('dotenv').config()
 const bcrypt = require('bcryptjs');
 const Sequelize = require('sequelize');
+const jwt = require('jsonwebtoken');
+const {CONNECTION_STRING, SECRET} = process.env;
 
-const {CONNECTION_STRING} = process.env;
+const createToken = (email, id) => {
+    return jwt.sign(
+        {
+            email,
+            id
+        },
+        SECRET,
+        {
+            expiresIn:"2 days",
+        }
+    )
+}
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
     dialect:'postgres',
@@ -25,7 +38,12 @@ module.exports = {
             const authenticated = bcrypt.compareSync(password,dbRes[0][0].passhash)
             !authenticated ? res.status(403).send('incorrect password') : delete dbRes[0][0].passhash
 
-            res.status(200).send(dbRes[0])
+            const token = createToken(email, dbRes[0][0].user_id);
+            console.log('token', token)
+
+            const userToSend = {...dbRes[0][0], token}
+            // res.status(200).send(dbRes[0])
+            res.status(200).send(userToSend)
         })
         .catch(err => console.log(err))
 
@@ -46,14 +64,15 @@ module.exports = {
                     select * from users where email = '${email}';
                 `).then(dbResponse => {
                     console.log(dbRes[0])
-                    const userToSend = [...dbResponse[0]]
+                    // const userToSend = [...dbResponse[0]]
+                    delete dbResponse[0][0].passhash;
+                    const token = createToken(email, dbResponse[0][0].user_id);
+                    console.log('token', token);
+                    const userToSend = {...dbResponse[0][0], token};
                     console.log(userToSend)
                     res.status(200).send(userToSend)
                 }).catch(err => console.log(err))
             }
-        }).catch(err => console.log(err))
-
-
-        
+        }).catch(err => console.log(err))  
     },
 }

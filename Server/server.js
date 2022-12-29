@@ -6,9 +6,12 @@ const {seed, getAllProducts, deleteProduct, editProduct, createProduct, createCu
 const {userLogin, userSignup} = require('./authController')
 
 const app = express();
+const corsOptions = {
+  exposedHeaders: 'Authorization',
+};
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
@@ -47,7 +50,7 @@ app.post("/create-checkout-session", async(req, res) => {
                 description: cart[index].category,
                 images: [cart[index].img]
               },
-              unit_amount: cart[index].price * 100,
+              unit_amount: +((cart[index].price * 100).toFixed(2)),
             },
             quantity: item.quantity,
           };

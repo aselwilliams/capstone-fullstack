@@ -41,7 +41,7 @@ function renderItems(products) {
   let menuItem = products.map((item) => {
     // let { img, title, price, id } = item;
     let itemStr=JSON.stringify(item)
-    console.log(itemStr)
+    // console.log(itemStr)
     return `
   <article class='menu-item'>
                 <div class="img-wrapper">

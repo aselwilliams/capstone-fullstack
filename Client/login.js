@@ -13,22 +13,31 @@ const baseUrl = 'http://localhost:8080'
 const login = (body) => axios.post(`${baseUrl}/api/login`, body)
     .then((res)=> {
         console.log('hit login')
-        sessionStorage.setItem('user', JSON.stringify(res.data));
+        // sessionStorage.setItem('user', JSON.stringify(res.data));
         // window.location.reload();
+      console.log(res.data)
+      let token = res.data.token;
+      sessionStorage.setItem("token", token);
+      sessionStorage.setItem("userId", res.data.user_id);
+
         window.location.href = './menu.html'
     })
     .catch((err)=> console.log(err));
 
 const signUp = (body) => axios.post(`${baseUrl}/api/signUp`, body)
-    .then((res)=> {
+    .then( async(res)=> {
         console.log('hit signUp')
-        if(res.data==='Email is already in use, try login'){
-            alert('Email is already in use, please login.')
-        } else {
-            alert("Account created successfully");
-        }
-        sessionStorage.setItem('user', JSON.stringify(res.data));
+        // if(res.data==='Email is already in use, try login'){
+        //     alert('Email is already in use, please login.')
+        // } else {
+        //     alert("Account created successfully");
+        // }
+        // sessionStorage.setItem('user', JSON.stringify(res.data));
         // window.location.reload();
+        let token = await res.data.token;
+        console.log(res.data);
+        sessionStorage.setItem("token", token);
+        sessionStorage.setItem("userId", res.data.user_id);
         window.location.href = './login.html'
     })
     .catch((err)=> console.log(err));
