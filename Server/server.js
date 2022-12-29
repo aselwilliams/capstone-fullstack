@@ -30,9 +30,9 @@ app.post('/api/orders', createCustomOrder)
 app.post('/api/subscribers', createSubscription)
 let cart=require('./db.json')
 
-app.post('/api/login',userLogin)
+app.post('/api/login', userLogin)
 
-app.post('/api/signUp',userSignup)
+app.post('/api/signUp', userSignup)
 
 app.post("/create-checkout-session", async(req, res) => {
     try {

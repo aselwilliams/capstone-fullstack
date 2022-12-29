@@ -66,6 +66,15 @@ html {
 #menu-btn {
   display: none;
 }
+.cart-item-count {
+  background-color: var(--neutral-color);
+  width: 2rem;
+  height: 2rem;
+  border-radius:50%;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -175,6 +184,7 @@ ul li{
 .link{
   color:#fff;
 }
+
 @media(max-width:568px){
     .pimg1, .pimg2, .pimg3{
         background-attachment: scroll;

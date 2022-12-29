@@ -6,6 +6,11 @@ const closeBtn = document.querySelector(".cart-close");
 const subtotal = document.querySelector('.cart-total');
 const cartItemCount = document.querySelector('.cart-item-count');
 
+window.addEventListener("DOMContentLoaded", function () {
+  renderCartItems(JSON.parse(localStorage.getItem('cart')))
+  renderSubtotal()
+});
+
 cartBtn.onclick = () => {
   cartContainer.classList.add("show");
   renderCartItems(JSON.parse(localStorage.getItem('cart')))
