@@ -1,15 +1,3 @@
-// header  hamburger btn toggle
-let navbar = document.querySelector(".navbar");
-let menuBtn = document.querySelector("#menu-btn");
-let menuContainer = document.querySelector(".menu-container");
-const btnContainer = document.querySelector(".btn-container");
-
-menuBtn.onclick = () => {
-  navbar.classList.toggle("active");
-};
-window.onscroll = () => {
-  navbar.classList.remove("active");
-};
 
 //CRUD operations
 const baseURL =`http://localhost:8080/api/products`;

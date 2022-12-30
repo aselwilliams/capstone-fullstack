@@ -1,3 +1,13 @@
+// header hamburger btn toggle
+let navbar = document.querySelector('.navbar');
+let menu = document.querySelector('#menu-btn');
+
+menu.onclick= () => {
+    navbar.classList.toggle('active');
+}
+window.onscroll = () => {
+    navbar.classList.remove('active');
+}
 // cart starts
 const cartBtn = document.querySelector("#cart-btn");
 const cartElement = document.querySelector(".cart");
