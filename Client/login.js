@@ -96,7 +96,7 @@ checkoutBtn.addEventListener("click", () => {
     })
     .then(({ url }) => {
       window.location = url
-      localStorage.clear()
+      // localStorage.clear()
     })
     .catch((e) => {
       console.error(e.error);

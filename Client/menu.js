@@ -19,7 +19,8 @@ const getAllProducts = () => axios.get(baseURL).then(({data: productsArr})=> {
 
 
 //populating the cards
-
+const menuContainer = document.querySelector('.menu-container')
+const btnContainer = document.querySelector('.btn-container')
 
 window.addEventListener("DOMContentLoaded", function () {
     getAllProducts()

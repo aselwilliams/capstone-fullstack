@@ -58,7 +58,7 @@ app.post("/create-checkout-session", async(req, res) => {
         // automatic_tax: {
         //     'enabled': true,
         // },
-        success_url: `http://127.0.0.1:5501/Client/index.html`,
+        success_url: `http://127.0.0.1:5501/Client/success.html`,
         cancel_url: `${process.env.PUBLIC_URL}/cancel.html`,
       });
       res.json({ url: session.url});
