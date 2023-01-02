@@ -42,14 +42,13 @@ module.exports = {
             console.log('token', token)
 
             const userToSend = {...dbRes[0][0], token}
-            // res.status(200).send(dbRes[0])
             res.status(200).send(userToSend)
         })
         .catch(err => console.log(err))
 
     },
     userSignup:(req,res) => {
-        const { email,password} = req.body
+        const { email, password, address, city, state, zipcode} = req.body
         console.log(email,password)
         sequelize.query(`select * from users where email = '${email}'`)
         .then(dbRes => {
@@ -60,11 +59,12 @@ module.exports = {
                 let salt = bcrypt.genSaltSync(10)
                 const passhash = bcrypt.hashSync(password,salt)
                 sequelize.query(`
-                    insert into users(email,passhash) values('${email}','${passhash}');
+                    insert into users(email,passhash,address,city,state,zipcode) 
+                    values('${email}','${passhash}','${address}','${city}','${state}','${zipcode}');
                     select * from users where email = '${email}';
                 `).then(dbResponse => {
-                    console.log(dbRes[0])
-                    // const userToSend = [...dbResponse[0]]
+                    console.log(dbResponse[0])
+            
                     delete dbResponse[0][0].passhash;
                     const token = createToken(email, dbResponse[0][0].user_id);
                     console.log('token', token);

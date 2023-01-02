@@ -14,7 +14,7 @@
   />
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="./cart.css">
-    <title>Bakin Art Menu</title>
+    <title>Baking Art Menu</title>
 </head>
 <body>
      <!-- header starts -->
@@ -32,6 +32,7 @@
           <div id="cart-btn" class="fas fa-shopping-bag"> </div>
           <span class="cart-item-count"></span>
           <a href="./login.html"><div id="login-btn" class="fas fa-user"></div></a>
+          <span class="logout">Log out</span>
           <div id="menu-btn" class="fas fa-bars"></div>
         </div>
       </header>
@@ -124,7 +125,14 @@
         <h3 class="cart-total">
           Subtotal :
         </h3>
-        <button class="cart-checkout btn"><a href="./login.html">Checkout</a></button>
+        <button class="cart-checkout btn">
+          <!-- {% if sessionStorage.getItem('token')!=="" %}
+          <a href="#">
+            {% else %}
+            <a href="./login.html">
+              {% endif %} -->
+              
+              Checkout</button>
     </section>
     </aside>
   </div>

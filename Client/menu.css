@@ -67,6 +67,19 @@ html {
   .show{
     display: block;
   }
+.logout{
+  background-color: white;
+  color:black;
+  position:absolute;
+  top:5.5rem;
+  right:0;
+  padding: 0.3rem;
+  font-size:14px;
+  display:none;
+}
+#login-btn:hover + .logout{
+  display:block;
+}
 
 .header .icons div {
   font-size: 2.5rem;

@@ -83,3 +83,11 @@ body{
     color:lightblue;
     transform:translateY(-30px);
 }
+#state{
+    margin-left:8rem;
+    margin-top:1rem;
+    width: 335px;
+    padding:.5rem;
+    border-radius: 0.4rem;
+    outline:none;
+}

@@ -13,8 +13,7 @@ const baseUrl = 'http://localhost:8080'
 const login = (body) => axios.post(`${baseUrl}/api/login`, body)
     .then((res)=> {
         console.log('hit login')
-        // sessionStorage.setItem('user', JSON.stringify(res.data));
-        // window.location.reload();
+  
       console.log(res.data)
       let token = res.data.token;
       sessionStorage.setItem("token", token);
@@ -27,13 +26,7 @@ const login = (body) => axios.post(`${baseUrl}/api/login`, body)
 const signUp = (body) => axios.post(`${baseUrl}/api/signUp`, body)
     .then( async(res)=> {
         console.log('hit signUp')
-        // if(res.data==='Email is already in use, try login'){
-        //     alert('Email is already in use, please login.')
-        // } else {
-        //     alert("Account created successfully");
-        // }
-        // sessionStorage.setItem('user', JSON.stringify(res.data));
-        // window.location.reload();
+      
         let token = await res.data.token;
         console.log(res.data);
         sessionStorage.setItem("token", token);
@@ -43,28 +36,50 @@ const signUp = (body) => axios.post(`${baseUrl}/api/signUp`, body)
     .catch((err)=> console.log(err));
 
     const handleAuth = (authType, body) => {
+      if(body.email!=='' && body.password!==''){
         authType === 'SignUp' ? signUp(body) : login(body);
+      } else {
+        alert('Please, fill out all fields.')
+      }
     }
 
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
+const address = document.querySelector('#address')
+const city = document.querySelector('#city')
+const state = document.querySelector('#state')
+const zipcode = document.querySelector('#zipcode')
 const authSubmit = document.querySelector('#submit-btn')
 const optionalMsg = document.querySelector('#optional-msg')
 const formTitle = document.querySelector('#form-title')
 
-
 authSubmit.addEventListener('click', (e)=> {
-
     e.preventDefault();
-    let emailValue = email.value;
-    let passwordValue = password.value;
-    if(emailValue !== "" && passwordValue !== ""){
-        const body = {email: email.value, password:password.value};
+ 
         console.log(authSubmit.textContent)
-        authSubmit.textContent.trim() === 'Login' ? handleAuth("Login", body) : handleAuth("SignUp", body);
-    }
+        if(authSubmit.textContent.trim() === 'Login') {
+          const loginBody = {
+            email: email.value, 
+            password:password.value
+          };
+          handleAuth("Login", loginBody)
+        } else {
+          const signUpBody = {
+            email: email.value, 
+            password: password.value,
+            address: address.value,
+            city: city.value,
+            state: state.value,
+            zipcode: zipcode.value
+          };
+          handleAuth("SignUp", signUpBody);
+        } 
         email.value = ''
         password.value = ''
+        address.value = ''
+        city.value = ''
+        state.value = ''
+        zipcode.value = ''
 })
 
 // ---------Checkout starts------------
@@ -96,7 +111,6 @@ checkoutBtn.addEventListener("click", () => {
     })
     .then(({ url }) => {
       window.location = url
-      // localStorage.clear()
     })
     .catch((e) => {
       console.error(e.error);
