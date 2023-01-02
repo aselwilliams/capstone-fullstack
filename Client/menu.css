@@ -77,7 +77,7 @@ html {
   font-size:14px;
   display:none;
 }
-#login-btn:hover + .logout{
+a #login-btn:hover + .logout{
   display:block;
 }
 

@@ -185,6 +185,8 @@ if(token){
       });
   });
 } else {
+  checkoutBtn.addEventListener("click", () => {
   window.location.href = "./login.html"
+  })
 }
 
