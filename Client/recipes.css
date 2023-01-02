@@ -75,6 +75,21 @@ html {
   align-items: center;
   font-size: 1.2rem;
 }
+
+.logout{
+  background-color: white;
+  color:black;
+  position:absolute;
+  top:5.3rem;
+  right:0;
+  padding: 0.3rem;
+  font-size:14px;
+  font-weight: 300;
+  display:none;
+}
+div#login-btn:hover > .logout{
+  display:block;
+}
 @media (max-width: 991px) {
   html {
     font-size: 55%;

@@ -155,11 +155,12 @@ function removeFromCart(id){
 }
 
 // ---------Checkout starts------------
-const checkoutBtn = document.querySelector(".cart-checkout");
+const cartCheckout = document.querySelector(".cart-checkout");
 let token = sessionStorage.getItem('token')
 
+
 if(token){
-  checkoutBtn.addEventListener("click", () => {
+  cartCheckout.addEventListener("click", () => {
     cartArr = JSON.parse(localStorage.getItem('cart'))
     
     fetch("http://localhost:8080/create-checkout-session", {
@@ -191,7 +192,7 @@ if(token){
       });
   });
 } else {
-  checkoutBtn.addEventListener("click", () => {
+  cartCheckout.addEventListener("click", () => {
   window.location.href = "./login.html"
   })
 }

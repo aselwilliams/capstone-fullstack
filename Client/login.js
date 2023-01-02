@@ -1,4 +1,10 @@
+var checkoutBtn = document.querySelector("#checkout-btn");
 
+console.log(document.referrer,'history')
+if(document.referrer!=='http://127.0.0.1:5501/Client/menu.html'){
+  checkoutBtn.style.display='none'
+  console.log('hit history')
+} 
 //waving the labels
 const labels = document.querySelectorAll(".form-control label");
 labels.forEach((label) => {
@@ -83,7 +89,6 @@ authSubmit.addEventListener('click', (e)=> {
 })
 
 // ---------Checkout starts------------
-const checkoutBtn = document.querySelector("#checkout-btn");
 
 checkoutBtn.addEventListener("click", () => {
   cartArr = JSON.parse(localStorage.getItem('cart'))
