@@ -75,9 +75,10 @@ html {
   right:0;
   padding: 0.3rem;
   font-size:14px;
+  font-weight: 300;
   display:none;
 }
-a #login-btn:hover + .logout{
+div#login-btn:hover > .logout{
   display:block;
 }
 

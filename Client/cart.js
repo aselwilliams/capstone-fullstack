@@ -8,6 +8,12 @@ menu.onclick= () => {
 window.onscroll = () => {
     navbar.classList.remove('active');
 }
+//logout
+let logoutBtn = document.querySelector('.logout')
+
+logoutBtn.onclick = () => {
+  sessionStorage.clear()
+}
 // cart starts
 const cartBtn = document.querySelector("#cart-btn");
 const cartElement = document.querySelector(".cart");
