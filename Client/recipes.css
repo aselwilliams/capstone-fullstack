@@ -23,7 +23,6 @@
 
 html {
   font-size: 62.5% !important;
-  /* overflow: hidden; */
   scroll-behavior: smooth;
   background-color: var(--neutral-color);
 }
@@ -74,6 +73,7 @@ html {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  display:none;
 }
 
 .logout{

@@ -1,10 +1,16 @@
 var checkoutBtn = document.querySelector("#checkout-btn");
 
 console.log(document.referrer,'history')
-if(document.referrer!=='http://127.0.0.1:5501/Client/menu.html'){
+
+// if(document.referrer=='http://127.0.0.1:5501/Client/index.html'){
+//   checkoutBtn.style.display='none'
+//   console.log('hit history')
+// } 
+let cartArr=JSON.parse(localStorage.getItem('cart'))
+if(!cartArr.length){
   checkoutBtn.style.display='none'
   console.log('hit history')
-} 
+}
 //waving the labels
 const labels = document.querySelectorAll(".form-control label");
 labels.forEach((label) => {

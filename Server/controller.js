@@ -29,7 +29,11 @@ module.exports = {
             CREATE TABLE users(
                 user_id serial primary key,
                 email varchar not null,
-                passhash varchar(500) not null 
+                passhash varchar(500) not null,
+                address text,
+                city varchar(50),
+                state varchar(50),
+                zipcode integer
             );
 
             CREATE TABLE subscribers (

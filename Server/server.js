@@ -15,6 +15,15 @@ app.use(cors(corsOptions));
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
+
+app.use(express.static('Client'))
+app.use(express.static('Assets'))
+
+//entry-point for app
+app.get('/',(req,res)=> {
+  res.sendFile(path.join(__dirname,'../Client/index.html'))
+})
+
 app.post('/api/seed', seed)
 
 app.get('/api/products', getAllProducts)
@@ -55,9 +64,6 @@ app.post("/create-checkout-session", async(req, res) => {
             quantity: item.quantity,
           };
         }),
-        // automatic_tax: {
-        //     'enabled': true,
-        // },
         success_url: `http://127.0.0.1:5501/Client/success.html`,
         cancel_url: `${process.env.PUBLIC_URL}/cancel.html`,
       });
