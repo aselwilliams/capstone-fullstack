@@ -1,6 +1,6 @@
 
 //CRUD operations
-const baseURL =`http://localhost:8080/api/products`;
+const url =`http://localhost:8080/api/products`;
 
 var products=[]
 // const productCallback = ({data: cartArr}) => {
@@ -8,7 +8,7 @@ var products=[]
 //     renderSubtotal(cartArr)};
 const errCallback = err =>console.log(err)
 
-const getAllProducts = () => axios.get(baseURL).then(({data: productsArr})=> {
+const getAllProducts = () => axios.get(url).then(({data: productsArr})=> {
     products = productsArr
     renderItems(products)
     renderBtns()
@@ -28,9 +28,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function renderItems(products) {
   let menuItem = products.map((item) => {
-    // let { img, title, price, id } = item;
     let itemStr=JSON.stringify(item)
-    // console.log(itemStr)
     return `
   <article class='menu-item'>
                 <div class="img-wrapper">

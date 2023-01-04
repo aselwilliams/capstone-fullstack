@@ -1,13 +1,15 @@
 var checkoutBtn = document.querySelector("#checkout-btn");
 
-console.log(document.referrer,'history')
 
-// if(document.referrer=='http://127.0.0.1:5501/Client/index.html'){
+// let cartArr=JSON.parse(localStorage.getItem('cart'))
+// if(cartArr.length===0){
 //   checkoutBtn.style.display='none'
 //   console.log('hit history')
-// } 
-let cartArr=JSON.parse(localStorage.getItem('cart'))
-if(!cartArr.length){
+// }
+
+// console.log(document.referrer,'history')
+
+if(document.referrer!=='http://localhost:8080/Client/menu.html'){
   checkoutBtn.style.display='none'
   console.log('hit history')
 }

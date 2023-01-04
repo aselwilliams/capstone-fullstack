@@ -16,8 +16,8 @@ app.use(cors(corsOptions));
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
 
-app.use(express.static('Client'))
 app.use(express.static('Assets'))
+app.use(express.static('Client'))
 
 //entry-point for app
 app.get('/',(req,res)=> {
