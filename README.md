@@ -24,5 +24,5 @@ The application consists of 3 layers: server, database and user interface. The t
   <img src="/Assets/recipes.png" width="23%" hspace="2%"/>
   <img src="/Assets/custom.png" width="23%" />
   <img src="/Assets/signup.png" width="23%"  hspace="2%"/>
-  <img src="/Assets/recipes.png" width="23%"  hspace="2%"/>
+  <img src="/Assets/login.png" width="23%"  hspace="2%"/>
 </p>

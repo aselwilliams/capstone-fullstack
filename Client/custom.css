@@ -23,7 +23,6 @@
 
 html {
   font-size: 62.5%;
-  /* overflow: hidden; */
   scroll-behavior: smooth;
   background-color: var(--neutral-color);
 }
