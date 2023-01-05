@@ -1,5 +1,13 @@
-var checkoutBtn = document.querySelector("#checkout-btn");
+//waving the labels
+const labels = document.querySelectorAll(".form-control label");
+labels.forEach((label) => {
+  label.innerHTML = label.innerText
+    .split("")
+    .map((letter, idx) => `<span style="transition-delay:${idx * 100}ms">${letter}</span>`)
+    .join("");
+});
 
+var checkoutBtn = document.querySelector("#checkout-btn");
 
 // let cartArr=JSON.parse(localStorage.getItem('cart'))
 // if(cartArr.length===0){
@@ -13,14 +21,7 @@ if(document.referrer!=='http://13.58.38.0/Client/menu.html'){
   checkoutBtn.style.display='none'
   console.log('hit history')
 }
-//waving the labels
-const labels = document.querySelectorAll(".form-control label");
-labels.forEach((label) => {
-  label.innerHTML = label.innerText
-    .split("")
-    .map((letter, idx) => `<span style="transition-delay:${idx * 100}ms">${letter}</span>`)
-    .join("");
-});
+
 
 const baseUrl = 'http://13.58.38.0'
 

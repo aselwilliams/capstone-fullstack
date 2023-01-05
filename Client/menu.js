@@ -1,6 +1,5 @@
 
 //CRUD operations
-// const url =`http://localhost:8080/api/products`;
 const url =`http://13.58.38.0/api/products`;
 
 var products=[]
