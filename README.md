@@ -3,7 +3,7 @@ Hello! My name is Asel Williams. This is my capstone project for DevMountain fou
 
 It allows users to order freshly baked goods quickly and easily. It will also save them time by providing a service to help with birthday parties and other celebrations.
 ### Tech Stack
-The application consists of 3 layers: server, database and user interface. The tech stack is JS, HTML, CSS, Express.js, Sequelize, bit.io, axios, bcrypt, JWT, Stripe API, Email.js and gsap.
+The application consists of 3 layers: server, database and user interface. The tech stack is JS, HTML, CSS, Express.js, Sequelize, bit.io, axios, bcrypt, JWT, Stripe API, Email.js and gsap. [Link to the project](http://13.58.38.0/)
 
 ## MVP Features
 1. User should be able to Log in or Sign up
@@ -19,8 +19,10 @@ The application consists of 3 layers: server, database and user interface. The t
 
 ### Screenshots
 <p float="left">
-  <img src="/Assets/home.png" width="23%" hspace="2%"/>
+  <img src="/Assets/home.png" width="23%" />
   <img src="/Assets/menu.png" width="23%" hspace="2%" /> 
-  <img src="/Assets/custom.png" width="23%" hspace="2%"/>
-  <img src="/Assets/recipes.png" width="23%" />
+  <img src="/Assets/recipes.png" width="23%" hspace="2%"/>
+  <img src="/Assets/custom.png" width="23%" />
+  <img src="/Assets/signup.png" width="23%"  hspace="2%"/>
+  <img src="/Assets/recipes.png" width="23%"  hspace="2%"/>
 </p>
