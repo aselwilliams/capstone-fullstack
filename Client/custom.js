@@ -2,7 +2,7 @@
 const orderForm = document.querySelector('form');
 emailjs.init('uPnmQwpK5dNLijMcd');
 
-const baseURL = 'http://localhost:8080/api/orders';
+const baseURL = 'http://13.58.38.0/api/orders';
 
 const createCustomOrder = (body) => axios.post(baseURL, body).then(res=>console.log(res.data)).catch(err=> console.log(err));
 

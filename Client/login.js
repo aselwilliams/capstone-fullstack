@@ -9,7 +9,7 @@ var checkoutBtn = document.querySelector("#checkout-btn");
 
 // console.log(document.referrer,'history')
 
-if(document.referrer!=='http://localhost:8080/Client/menu.html'){
+if(document.referrer!=='http://13.58.38.0/Client/menu.html'){
   checkoutBtn.style.display='none'
   console.log('hit history')
 }
@@ -22,7 +22,7 @@ labels.forEach((label) => {
     .join("");
 });
 
-const baseUrl = 'http://localhost:8080'
+const baseUrl = 'http://13.58.38.0'
 
 const login = (body) => axios.post(`${baseUrl}/api/login`, body)
     .then((res)=> {
@@ -101,7 +101,7 @@ authSubmit.addEventListener('click', (e)=> {
 checkoutBtn.addEventListener("click", () => {
   cartArr = JSON.parse(localStorage.getItem('cart'))
   
-  fetch("http://localhost:8080/create-checkout-session", {
+  fetch("http://13.58.38.0/create-checkout-session", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

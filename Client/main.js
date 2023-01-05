@@ -38,7 +38,7 @@ let words2 = ["all objections"]
 //get all products
 const menuLink = document.querySelector('#menu-link');
 
-const baseURL =`http://localhost:8080/api/products`;
+const baseURL =`http://13.58.38.0/api/products`;
 
 const productCallback = ({data: products}) => displayProducts(products);
 const errCallback = err =>console.log(err.response.data)
@@ -64,7 +64,7 @@ function handleSubmit(e) {
         name: name.value,
         email: email.value
     }
-    axios.post('http://localhost:8080/api/subscribers', newSub).then(res=>console.log(res.data)).catch(err=> console.log(err));
+    axios.post('http://13.58.38.0/api/subscribers', newSub).then(res=>console.log(res.data)).catch(err=> console.log(err));
     // createSubscription(newSub)
     alert('Thank you for your subscription!')
     name.value = ''

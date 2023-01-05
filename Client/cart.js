@@ -163,7 +163,7 @@ if(token){
   cartCheckout.addEventListener("click", () => {
     cartArr = JSON.parse(localStorage.getItem('cart'))
     
-    fetch("http://localhost:8080/create-checkout-session", {
+    fetch("http://13.58.38.0/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
