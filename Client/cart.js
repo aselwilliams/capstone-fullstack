@@ -11,6 +11,10 @@ window.onscroll = () => {
 //logout
 let logoutBtn = document.querySelector('.logout')
 
+if(!sessionStorage.getItem('token')){
+  logoutBtn.style.display='none'
+}
+
 logoutBtn.onclick = () => {
   sessionStorage.clear()
 }
