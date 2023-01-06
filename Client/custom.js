@@ -44,7 +44,7 @@ function handleSubmit(e) {
     emailjs.send(serviceId, templateId, newOrder).then(res=>{
     console.log(res) 
     alert('Your message sent successfully!')}).catch(err=>console.log(err))
-
+    clearRadioBtns()
         name.value = ''
         email.value = ''
         phone.value = ''
@@ -57,8 +57,12 @@ function handleSubmit(e) {
         color.value = ''
         date.value = ''
         time.value = ''
-        details.value = ''
+        details.value = ''  
 }
 
+function clearRadioBtns(){
+    let radioBtns= document.querySelectorAll('input[type="radio"]')
+    radioBtns.forEach((el)=>el.checked=false)
+}
 
 orderForm.addEventListener('submit', handleSubmit)
