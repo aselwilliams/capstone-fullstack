@@ -91,3 +91,14 @@ body{
     border-radius: 0.4rem;
     outline:none;
 }
+@media (max-width: 450px) {
+    .container {
+        width:380px;
+    }
+    .form-control, form{
+        width: 300px;
+    }
+    #state{
+        width:170px;
+    }
+}
