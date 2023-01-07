@@ -128,7 +128,10 @@ div#login-btn:hover > .logout{
   html {
     font-size: 50%;
   }
+  a.link{
+    line-height: 50px;
 }
+  }
 body,html {
     height: 100%;
     margin: 0;
