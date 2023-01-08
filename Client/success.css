@@ -146,7 +146,9 @@ html {
         height: 40vh;
     }
     .heading{
-        color:var(--neutral-color)
+        top:9rem;
+        left:12rem;
+        font-size:2rem;
     }
   }
 
