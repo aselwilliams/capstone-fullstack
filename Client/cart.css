@@ -151,3 +151,11 @@
   button a {
     color:#fff;
   }
+  @media (max-width: 450px) {
+    .cart{
+      height:95vh;
+    }
+    .cart-item-count{
+      right:9rem;
+    }
+  }
