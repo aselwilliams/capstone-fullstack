@@ -99,7 +99,7 @@ searchInput.addEventListener("input", function (event) {
   const name = event.target.value;
   console.log(products,'in search', name)
   const filteredData = products.filter((item) => {
-    return item.title.toLowerCase().includes(name);
+    return item.title.toLowerCase().includes(name.toLowerCase());
   });
   renderItems(filteredData);
 });
