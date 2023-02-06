@@ -143,7 +143,7 @@ div#login-btn:hover > .logout{
     font-weight: bolder;
     position:absolute;
     top:15rem;
-    left:15rem;
+    left:30rem;
   }
   .hero img {
     width: 100%;
@@ -232,8 +232,13 @@ div#login-btn:hover > .logout{
     align-items: center;
     padding:2rem;
   }
+  .filter-btn {
+    margin:2rem;
+    color:black;
+    text-transform: capitalize;
+  }
 
-  .filter-btn, .cart-checkout {
+   .cart-checkout {
     background-color:var(--primary-color);
     margin:2rem;
     color:black;

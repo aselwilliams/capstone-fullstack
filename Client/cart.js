@@ -168,6 +168,7 @@ if(token){
     cartArr = JSON.parse(localStorage.getItem('cart'))
     
     fetch("http://13.58.38.0/create-checkout-session", {
+    // fetch("http%3A%2F%2F13.58.38.0%2Fcreate-checkout-session%0D%0A", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -191,8 +192,8 @@ if(token){
       .then(({ url }) => {
         window.location = url
       })
-      .catch((e) => {
-        console.error(e.error);
+      .catch((err) => {
+        console.error(err.error);
       });
   });
 } else {

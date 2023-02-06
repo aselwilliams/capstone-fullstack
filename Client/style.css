@@ -344,7 +344,7 @@ div#login-btn:hover > .logout{
   width: 350px;
   height: 430px;
 }
-.pink-btn {
+.pink-btn,#sub-btn {
   background-color: var(--primary-color);
   color: #000;
   margin-bottom: 2.5rem;
